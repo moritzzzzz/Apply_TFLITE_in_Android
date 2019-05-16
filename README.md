@@ -10,5 +10,5 @@ Here I will show how I implement a TensorFlowLite model (.tflite) in an Android 
 
 First thing we need to do is prepare the Android gradle file, in order to tell Android, not to compress the model, which would kill it, as the weights might slightly change through compression.
 
-[image1]: https://s3.amazonaws.com/video.udacity-data.com/topher/2018/May/5af7955a_tennis/tennis.png "Playing Tennis"
-![Tennis][image1]
+[image1]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/1.JPG "gradle1"
+![Gradle1][image1]
