@@ -32,7 +32,7 @@ The model file needs to be put into a folder of type "Assets". if it does not ye
 
 Place the trained model, of format .tflite, into this assets folder.
 
-## Hints building the Android Activity 
+## Hints for building the Android Activity 
 
 The Android activity is the actual java class that will run the trained TFLite model. Therefore we need to import the TFLite interpreter:
 
