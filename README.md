@@ -8,6 +8,10 @@ How to apply a trained Tensorflow Lite model (.tflite) in an Android application
 [image5]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/5.jpg "model3"
 [image6]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/6.jpg "model4"
 [image7]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/7.jpg "model5"
+[image8]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/8.jpg "model6"
+[image9]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/9.jpg "model7"
+[image10]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/10.jpg "model8"
+[image11]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/11.jpg "model9"
 
 ## Motivation
 Training neural networks for use in AI agents is fun, but having them run on a VM, far from where their use can be applied is boring. Therefore running the trained models for prediction inside mobile applications makes sense. 
@@ -53,7 +57,19 @@ Change "Activity" to "Context" in LoadModel():
 
 ![Model5][image7]
 
+## Preprocessing: Input data pipeline
 
+At this point, we have to prepare our input data for processing by the TFLite model. As I have mentioned, this example discusses processing image input data. Therefore we need to preprocess the input image, to fit the input layer of the trained neural network.
 
+In my case the input layer of the neural network is of dimensions 224x224x3. (quadratic RGB image with 224 pixels side length)
+Below method will crop a region of size 224x224 out of a larger image, as this is the region of interest:
+
+![Model6][image8]
+
+The cropped image now fits the input layer dimensions.
+
+### Image operations
+
+**Run the image operations, as well as the prediction in an asynchronous task, as these operations are CPU/GPU intensive. This will create a new CPU/GPU thread and not slow down the UI Thread**
 
 
