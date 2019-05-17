@@ -1,6 +1,8 @@
 # Apply_TFLITE_in_Android
 How to apply a trained Tensorflow Lite model (.tflite) in an Android application.
 
+Please contact me for a code sample of the Android project.
+
 [image1]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/1.JPG "gradle1"
 [image2]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/2.jpg "gradle2"
 [image3]: https://github.com/moritzzzzz/Apply_TFLITE_in_Android/blob/master/3.jpg "model1"
