@@ -78,7 +78,7 @@ In below function we will iterate over the RGB pixel values with 2 for-loops and
 
 ![Model7][image9]
 
-### Executing the prediction
+## Executing the prediction
 
 My model is trained to recognize humans, nothing else. Therefore my output is a single probability. In below result assignment, only the first element of the output array is required:
 
@@ -87,6 +87,6 @@ My model is trained to recognize humans, nothing else. Therefore my output is a 
 ![Model9][image11]
 
 
-
+**Input and output must be float arrays, of the exact dimension defined by the model of the CNN.**
 
 
