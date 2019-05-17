@@ -72,4 +72,21 @@ The cropped image now fits the input layer dimensions.
 
 **Run the image operations, as well as the prediction in an asynchronous task, as these operations are CPU/GPU intensive. This will create a new CPU/GPU thread and not slow down the UI Thread**
 
+The TFLite interpreter takes either a ByteBuffer or a FloatBuffer as input, no bitmap. For that we need to convert the RGB bitmap to one of these formats. 
+
+In below function we will iterate over the RGB pixel values with 2 for-loops and will write the pixel values into the ByteBuffer:
+
+![Model7][image9]
+
+### Executing the prediction
+
+My model is trained to recognize humans, nothing else. Therefore my output is a single probability. In below result assignment, only the first element of the output array is required:
+
+![Model8][image10]
+
+![Model9][image11]
+
+
+
+
 
